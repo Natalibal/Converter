@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    height: 3rem;
+    width: 100%;
+    margin: 1rem;
+    padding-left: 5rem;
+}
+
+.header__date {
+    width: 10rem;
+    height: 100%;
+    font-size: 1rem;
+    background: white;
+    color: black;
+    box-shadow: 6px 6px 10px rgba(110, 234, 178, 0.5);
+    border-radius: 6px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 3rem;
+}
+
+.title {
+    display: block;
+    color: rgb(13, 244, 59);
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 1rem;
+}
+
+.wrapper {
+    width: fit-content;
+    margin: 2rem auto;
+}
+
+.calc_exchange {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.calc_exchangeBox {
+    width: 20rem;
+    height: 3rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 6px 6px 10px rgba(110, 234, 178, 0.5);
+    border-radius: 6px;
+    position: relative;
+    justify-content: space-between;
+}
+
+.CurrencyName {
+    width: 10rem;
+    height: 3rem;
+    border: 0px;
+    border-radius: 0 5px 5px 0;
+    outline: none;
+    flex: 1 1 auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.output,
+.input {
+    width: 10rem;
+    height: 3rem;
+    border: 0px;
+    border-radius: 5px 0 0 5px;
+    line-height: 3rem;
+    text-align: center;
+    vertical-align: middle;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    flex: 1 1 auto;
+    outline: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btn {
+    width: 30%;
+    height: 2rem;
+    background: rgb(13, 244, 59);
+    color: white;
+    border: rgb(13, 244, 59);
+    border-radius: 5px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: #7d85df8a;
+    color: rgb(13, 244, 59);
+}
+
+.input:hover,
+.CurrencyName:hover {
+    cursor: pointer;
+    border: solid 2px rgb(13, 244, 59);
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox 
+input[type=number] {
+    -moz-appearance: textfield;
+}*/
+
+.subtitle {
+    color: rgb(13, 244, 59);
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 2rem 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    column-gap: 3rem;
+    margin: 1rem auto;
+    box-shadow: 2px -2px 10px rgba(97, 107, 214, 0.2);
+}
+
+@media all and (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.grid__item {
+    border-bottom: 1px solid rgb(13, 244, 59);
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.grid__item:last-child {
+    padding-bottom: 50px;
+}
+
+.grid__itemAbbrev {
+    width: 20%;
+    text-align: left;
+}
+
+.grid__itemRate {
+    width: 20%;
+    text-align: left;
+}
+
+.grid__itemName {
+    width: 45%;
+}
